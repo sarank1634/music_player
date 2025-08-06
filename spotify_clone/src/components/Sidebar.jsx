@@ -2,7 +2,7 @@ import { assets } from '../assets/assets';
 
 const Sidebar = () => {
     return (
-        <div className="w-[25%] h-full p-2 flex flex-col gap-4 text-white hidden lg:flex">
+        <div className="w-[25%] h-full p-2 flex flex-col gap-4 text-white">
             {/* Navigation Section */}
             <div className="bg-[#121212] p-4 rounded-lg">
                 <div className="flex items-center gap-3 mb-6 cursor-pointer hover:text-white/80">

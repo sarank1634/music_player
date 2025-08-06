@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 /* Your custom CSS below */
+
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

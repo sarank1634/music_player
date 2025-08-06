@@ -14,3 +14,5 @@ If you are developing a production application, we recommend using TypeScript wi
 
 7.47 assets adding 
 12.55 problem 
+
+1.08.38 finish

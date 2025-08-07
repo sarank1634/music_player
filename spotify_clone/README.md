@@ -30,3 +30,5 @@ If you are developing a production application, we recommend using TypeScript wi
 1.53.18 play and passworking
 
 2.01.59 set time based on song completed
+
+2.04.38 green bar bg output bug

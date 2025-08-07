@@ -28,3 +28,5 @@ If you are developing a production application, we recommend using TypeScript wi
 
 1.49.46 context
 1.53.18 play and passworking
+
+2.01.59 set time based on song completed

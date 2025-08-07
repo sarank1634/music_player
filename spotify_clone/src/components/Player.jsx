@@ -5,7 +5,7 @@ import { PlayerContext } from "../context/PlayerContext";
 
 const Player = () => {
 
-    const {seekBar, seekBg} = useContext(PlayerContext)
+    const {seekBar, seekBg, playStatus, Play, Pause} = useContext(PlayerContext)
     
     return(
         <div className="h-[15%] bg-black flex justify-between items-center text-white px-4 ">
@@ -20,7 +20,8 @@ const Player = () => {
                 <div className="flex gap-4">
                     <img className="w-4 cursor-pointer" src={assets.shuffle_icon} alt="" />
                     <img className="w-4 cursor-pointer" src={assets.prev_icon} alt="" />
-                    <img className="w-4 cursor-pointer" src={assets.play_icon} alt="" />
+                    <img onClick={Play} className="w-4 cursor-pointer" src={assets.play_icon} alt="" />
+                    <img onClick={Pause} className="w-4 cursor-pointer" src={assets.pause_icon} alt="" />
                     <img className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
                     <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
                 </div>

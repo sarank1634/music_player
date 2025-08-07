@@ -24,4 +24,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 1.20.59 bug 
 
-1.22.21 alignment bug
+1.22.21 alignment bug 
+
+1.49.46 context
+1.53.18 play and passworking

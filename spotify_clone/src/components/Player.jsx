@@ -5,7 +5,7 @@ import { PlayerContext } from "../context/PlayerContext";
 
 const Player = () => {
 
-    const {track,seekBar,seekBg,playStatus,Play,Pause,time,Previous,Next} = useContext(PlayerContext)
+    const {track,seekBar,seekBg,playStatus,Play,Pause,time,Previous,Next,seekSong} = useContext(PlayerContext)
     
     return(
         <div className="h-[15%] bg-black flex justify-between items-center text-white px-4 ">
@@ -27,7 +27,7 @@ const Player = () => {
                     <img onClick={Next} className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
                     <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
                 </div>
-                <div ref={seekBg} className="flex items-center gap-5">
+                <div ref={seekBg}  onClick={seekSong} className="flex items-center gap-5">
                     <p>{time.currentTime.minute}:{time.currentTime.second}</p>
                     <div className="w-[60vw] max-w-[500px] h-1 bg-gray-600 rounded-full cursor-pointer group relative">
                        <div ref={seekBar} className="absolute top-0 left-0 h-full bg-green-500 rounded-full group-hover:bg-green-400 transition-all duration-300" style={{ width: '0%' }}></div> 

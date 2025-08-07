@@ -52,6 +52,10 @@ const PlayerContextProvider = (props) => {
             setPlayStatus(true);
         }
     }  
+ //seek song to play
+    const seekSong = async(e) => {
+        audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth)*audioRef.current.duration);
+    }
 
     useEffect(() => {
         setTimeout(() => {
@@ -83,7 +87,8 @@ const PlayerContextProvider = (props) => {
         time, setTime,
         Play, Pause,
         PlayWithId,
-        Previous, Next
+        Previous, Next,
+        seekSong
     }
 
     return(

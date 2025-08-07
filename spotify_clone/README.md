@@ -19,3 +19,9 @@ If you are developing a production application, we recommend using TypeScript wi
 
 11.51am 
             <div onClick={() => navigate(`/album/${id}`)} className="min--[180px] p-2 rounded cursor-pointer hover: bg-[#ffffff26]">
+
+1.18.52
+
+1.20.59 bug 
+
+1.22.21 alignment bug

@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { assets, songsData } from "../assets/assets";
+import { PlayerContext } from "../context/PlayerContext";
 
 
 const Player = () => {
+
+    const {seekBar, seekBg} = useContext(PlayerContext)
+    
     return(
         <div className="h-[15%] bg-black flex justify-between items-center text-white px-4 ">
               <div className="lg:flex items-center gap-4">
@@ -19,10 +24,10 @@ const Player = () => {
                     <img className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
                     <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
                 </div>
-                <div className="flex items-center gap-5">
+                <div ref={seekBg} className="flex items-center gap-5">
                     <p>1:06</p>
-                    <div className="w-[25vw] max-w-[500px] bg-gray-800 rounded-full cursor-pointer">
-                       <hr className="h-1  w-0 bg-green-800 rounded-full" /> 
+                    <div className="w-[60vw] max-w-[500px] bg-gray-800 rounded-full cursor-pointer">
+                       <hr ref={seekBar} className="h-1  w-0 bg-green-800 rounded-full" /> 
                     </div>
                     <p>3:20</p>
                 </div>

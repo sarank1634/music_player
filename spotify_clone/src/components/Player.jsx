@@ -5,7 +5,7 @@ import { PlayerContext } from "../context/PlayerContext";
 
 const Player = () => {
 
-    const {track,seekBar,seekBg,playStatus,Play,Pause,time} = useContext(PlayerContext)
+    const {track,seekBar,seekBg,playStatus,Play,Pause,time,Previous,Next} = useContext(PlayerContext)
     
     return(
         <div className="h-[15%] bg-black flex justify-between items-center text-white px-4 ">
@@ -19,12 +19,12 @@ const Player = () => {
               <div className="flex flex-col items-center gap-4 m-auto">
                 <div className="flex gap-4">
                     <img className="w-4 cursor-pointer" src={assets.shuffle_icon} alt="" />
-                    <img className="w-4 cursor-pointer" src={assets.prev_icon} alt="" />
+                    <img onClick={Previous} className="w-4 cursor-pointer" src={assets.prev_icon} alt="" />
                     {playStatus ?
                      <img onClick={Pause} className="w-4 cursor-pointer" src={assets.pause_icon} alt="" /> //use ternary oprator to check play or not
                     : <img onClick={Play} className="w-4 cursor-pointer" src={assets.play_icon} alt="" />
                     }
-                    <img className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
+                    <img onClick={Next} className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
                     <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
                 </div>
                 <div ref={seekBg} className="flex items-center gap-5">
@@ -35,7 +35,7 @@ const Player = () => {
                     <p>{time.totalTime.minute}:{time.totalTime.second}</p>
                 </div>
               </div>
-              <div cla ssName="flex items-center gap-2 opacity-75">
+              <div className="flex items-center gap-2 opacity-75">
                 <img className="w-4" src={assets.plays_icon} alt="" />
                 <img className="w-4" src={assets.mic_icon} alt="" />
                 <img className="w-4" src={assets.queue_icon} alt="" />
@@ -44,7 +44,6 @@ const Player = () => {
                 <img className="w-20 bg-slate-50 h-1 rounded" src={assets.clock_icon} alt="" />
               </div>
 
-            
         </div>
     )
 }

@@ -8,7 +8,7 @@ const PlayerContextProvider = (props) => {
     const seekBg = useRef();
     const seekBar = useRef();
 
-    const [track, setTrack] = useState(songsData[0]);// store 
+    const [track, setTrack] = useState(songsData[1]);// store 
     const [playStatus, setPlayStatus] = useState(false);
     const [time, setTime] = useState({ //set time status
         currentTime: {
@@ -30,6 +30,17 @@ const PlayerContextProvider = (props) => {
         audioRef.current.pause();
         setPlayStatus(false);
     }
+    
+    useEffect(() => {
+        setTimeout(() => {
+
+            audioRef.current.onTimeupdate = () => {
+                 setTime()
+            }
+
+        }, 1000);
+
+    },[audioRef])
 
     const contextValue = {
         audioRef,

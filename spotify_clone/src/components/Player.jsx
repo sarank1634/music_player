@@ -29,8 +29,8 @@ const Player = () => {
                 </div>
                 <div ref={seekBg} className="flex items-center gap-5">
                     <p>{time.currentTime.minute}:{time.currentTime.second}</p>
-                    <div className="w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer">
-                       <hr ref={seekBar} className="h-1  w-0 bg-green-800 rounded-full" /> 
+                    <div className="w-[60vw] max-w-[500px] h-1 bg-gray-600 rounded-full cursor-pointer group relative">
+                       <div ref={seekBar} className="absolute top-0 left-0 h-full bg-green-500 rounded-full group-hover:bg-green-400 transition-all duration-300" style={{ width: '0%' }}></div> 
                     </div>
                     <p>{time.totalTime.minute}:{time.totalTime.second}</p>
                 </div>
